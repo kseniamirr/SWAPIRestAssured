@@ -19,8 +19,9 @@ import static io.restassured.RestAssured.when;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.testng.AssertJUnit.assertEquals;
+import static org.testng.AssertJUnit.assertTrue;
 
-public class People {
+public class PeopleTest {
     public static Response response;
     public static String jsonAsString;
 
@@ -84,12 +85,7 @@ public class People {
         JsonPath jsonPath = response.jsonPath();
 
         List<String> list2 = response.jsonPath().get("results.films[0]");
-        compaireTwoLists(list2, list11);
-
-    }
-
-    private void compaireTwoLists(List list2, List list11) {
-        assertThat(list2, equalTo(list11));
+        assertTrue(list2.equals(list11));
 
     }
 
