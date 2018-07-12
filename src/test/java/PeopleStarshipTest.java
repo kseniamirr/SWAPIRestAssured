@@ -2,7 +2,7 @@ import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.parsing.Parser;
 import io.restassured.response.Response;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeTest;   
 import org.testng.annotations.Test;
 import java.util.ArrayList;
 import java.util.List;
