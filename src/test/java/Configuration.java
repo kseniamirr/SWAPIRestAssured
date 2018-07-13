@@ -4,6 +4,7 @@ import io.restassured.parsing.Parser;
 import io.restassured.response.Response;
 import static io.restassured.RestAssured.given;
 
+
  class Configuration {
 
     private final static String PEOPLEPOINT = "https://swapi.co/api/people/1";
