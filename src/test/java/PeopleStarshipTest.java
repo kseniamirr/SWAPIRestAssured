@@ -47,11 +47,13 @@ public class PeopleStarshipTest {
             counter = counter + 1;
             assertStarship(starshipActualResult, starhipExpectedResult);
         }
+
     }
 
     public void assertStarship(Starship strActualResult, Starship strExpectedResult) {
         assertThat(strActualResult.getModel(), equalTo(strExpectedResult.getModel()));
         assertThat(strActualResult.getManufacturer(), equalTo(strExpectedResult.getManufacturer()));
+        assertThat(strActualResult.getName(),equalTo(strExpectedResult.getName()));
     }
 
     @BeforeTest
